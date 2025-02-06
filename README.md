@@ -31,27 +31,5 @@ Unit Converter/
 
 ---
 
-## Installation and Setup
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Alkawil/Unit-Converter.git
-   cd Unit-Converter
-   ```
-
-2. **Set Up Virtual Environment** (Optional but recommended)
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install Dependencies**
-   ```bash
-   pip install flask
-   ```
-
-4. **Run the Application**
-   ```bash
-   python app.py
-   ```
 
