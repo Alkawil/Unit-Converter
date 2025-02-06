@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if result is not none %}
+    <p>Result of your calculation:</p>
+    <p>{{ value }} {{ from_unit }} = {{ result }} {{ to_unit }}</p>
+    <form method="get" action="/weight">
+        <button type="submit">Reset</button>
+    </form>
+
+{% else %}
+    <form method="post" action="/weight">
+       <br> <label for="value">Enter the weight to convert:</label><br>
+        <input type="number" id="value" name="value" placeholder="Enter value" required><br>
+        <br>
+        <label for="from_unit">Unit to convert from:</label><br>
+        <select id="from_unit" name="from_unit">
+            <option value="milligram">Milligram</option>
+            <option value="gram">Gram</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="ounce">Ounce</option>
+            <option value="pound">Pound</option>
+        </select><br><br>
+
+        <label for="to_unit">Unit to convert to:</label><br>
+        <select id="to_unit" name="to_unit">
+            <option value="milligram">Milligram</option>
+            <option value="gram">Gram</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="ounce">Ounce</option>
+            <option value="pound">Pound</option>
+        </select><br><br>
+
+        <button type="submit">Convert</button>
+    </form>
+{% endif %}
+{% endblock %}
